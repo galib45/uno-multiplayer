@@ -1,0 +1,30 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>UNO</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.min.js" integrity="sha512-HTENHrkQ/P0NGDFd5nk6ibVtCkcM7jhr2c7GyvXp5O+4X6O5cQO9AhqFzM+MdeBivsX7Hoys2J7pp2wdgMpCvw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<!-- GOOGLE FONTS -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+	<div class="container">
+		<div id="svg-data"></div>
+		<div id="ui" style="visibility:hidden">
+			<h3 id="greetings"></h3>
+			<div id="players-list"></div>
+			<button id="start-game" style="visibility:hidden">START</button>
+		</div>
+		<div id="game" style="visibility:hidden">
+			<div id="commonArea"></div>
+			<div id="playerArea"</div>
+		</div>
+	</div>
+	<script src="{{ url_for('static', filename='svg.js') }}" defer></script>
+	<script src="{{ url_for('static', filename='index.js') }}" defer></script>
+</body>
+</html>
